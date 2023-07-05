@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/b4eba511f5.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/b4eba511f5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/home.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="bg-container">
+            <h3>Welcome, <%= messages.username %></h3>
+            <br>
+            
+            <div class="sub-container">
+                <h1 class="headingStyling">Task Manager</h1>
+                <input class="textBox" id="todoText" type="text" placeholder="eg: Play Cricket">
+                <button class="buttonStyling" id="submit">Submit</button>
+            </div>
+
+            <div class = "options">
+                <div class="dropdown">
+                    <button class="btn btn btn-color dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      ALL
+                    </button>
+                    <button class = "buttonStyling ml-5" id = "clearBtn">Clear All</button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <button id = "allButton" class="dropdown-item active">All</button>
+                      <button id = "completedButton" class="dropdown-item">Completed</button>
+                      <button id = "pendingButton" class="dropdown-item">Pending</button>
+                    </div>
+                  </div>
+                
+            </div>
+            <h1 id = "textMessage" class = "headingStyling"></h1>
+            
+            <div class="tasks" id="tasksEl">
+                
+
+            </div>
+         
+            
+
+        </div>
+        <div class = "logoutClass containerBtn" id = "containerBtn">
+            <button class = "buttonStyling" id = "logoutButton">Logout</button>
+            
+        </div>
+    </div>
+
+
+    <script src="home.js"></script>
+</body>
+
+</html>
